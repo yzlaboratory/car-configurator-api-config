@@ -1,6 +1,6 @@
 #use shared modules to reduce duplicate code after the fact
 
-name: 'Config Microservice Pipeline'
+name: 'Configs Microservice Pipeline'
 
 on:
   pull_request:
@@ -21,9 +21,9 @@ permissions:
 env:
   TF_VERSION: 'latest'
   AWS_REGION: 'eu-central-1'
-  ECR_REPOSITORY: 'car-configurator/api-config'
-  ECS_SERVICE_STAGING: 'car-configurator-staging-config-ecs'
-  ECS_SERVICE_PRODUCTION: 'car-configurator-prod-config-ecs'
+  ECR_REPOSITORY: 'car-configurator/api-configs'
+  ECS_SERVICE_STAGING: 'car-configurator-staging-configs-ecs'
+  ECS_SERVICE_PRODUCTION: 'car-configurator-prod-configs-ecs'
   ECS_CLUSTER_STAGING: 'car-configurator-staging-cluster'
   ECS_CLUSTER_PROD: 'car-configurator-prod-cluster'
 

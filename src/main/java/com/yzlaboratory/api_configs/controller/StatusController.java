@@ -1,4 +1,4 @@
-package com.yzlaboratory.api_config.controller;
+package com.yzlaboratory.api_configs.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping("/config")
+@RequestMapping("/configs")
 public class StatusController {
 
     @GetMapping("/status")
