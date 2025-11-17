@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/configs")
-public class StatusController {
+public class ConfigController {
 
     @GetMapping("/status")
     public String status() {
