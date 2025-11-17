@@ -20,19 +20,16 @@ public class ConfigController {
 
     @GetMapping("/status")
     public String status() {
-        System.out.println("Status Controller called");
         return "<h1>Hello World, its me the Status Controller of your friend api-configs</h1>";
     }
 
     @GetMapping("/{configId}")
     public Config getConfigById(@PathVariable("configId") String configId) {
-        System.out.println("getConfigById Controller called");
         return this.dynamoDbService.getConfigById(configId);
     }
 
     @PostMapping()
     public ResponseEntity<String> postConfig(@RequestBody Config config) {
-        System.out.println("postConfig Controller called");
         config.setConfigId(UUIDService.getUUID());
         this.dynamoDbService.saveConfig(config);
         return new ResponseEntity<>(config.getConfigId(), HttpStatus.CREATED);
